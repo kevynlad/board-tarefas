@@ -21,35 +21,8 @@ MySQL: Sistema de gerenciamento de banco de dados relacional.
 Diagrama de Classes
 O diagrama abaixo representa a estrutura do domínio da aplicação:
 
-mermaid
-classDiagram
-    class Board {
-        id: long
-        name: string
-    }
-    class BoardColumns {
-        id: long
-        name: string
-        kind: string
-        order: int
-    }
-    class Card {
-        id: long
-        title: string
-        description: string   
-        createdAt: OffsetDateTime     
-    }
-    class Block {
-        id: long        
-        blockedAt: OffsetDateTime
-        blockReason: string
-        unblockedAt: OffsetDateTime
-        unblockReason: string
-    }
+![image](https://github.com/user-attachments/assets/56bf5c5f-e626-4b1a-87a0-437b76e648f3)
 
-  Board "1" *-- "N" BoardColumns
-  BoardColumns "1" *-- "N" Card
-  Card "1" *-- "N" Block
 Relação entre Entidades
 Board: Representa o quadro de tarefas, que contém várias colunas.
 
